@@ -4,6 +4,8 @@
 <head>
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 </head>
 
 <body>
@@ -34,6 +36,16 @@
                 <span>Dream Catcher</span>
             </div>
             <div class="main tab">
+                <div class="filter">
+                    <div class="filter-container">
+                    <a id="sort" >
+                        <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiBox-root css-uqopch" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="SortIcon" width="50px"><path d="M3 18h6v-2H3v2zM3 6v2h18V6H3zm0 7h12v-2H3v2z"></path></svg>
+                    </a>
+                    
+                    <input type="text" id="search" class="filter-input" placeholder="Search...">
+                <span></span>
+                </div>
+                </div>
                 <table id="form-data">
                     <thead>
                       <tr>
@@ -46,6 +58,36 @@
                     <tbody id="formData">
                     </tbody>
                   </table>
+                  <div id="editModal" class="modal">
+                    <div class="modal-content">
+                      <h2>Edit Form Data</h2>
+                      <label for="editName">Name:</label>
+                      <input type="text" id="editName"><br><br>
+                      <label for="editEmail">Email:</label>
+                      <input type="email" id="editEmail"><br><br>
+                      <label for="editPhone">Phone:</label>
+                      <input type="tel" id="editPhone"><br><br>
+                      <labe for="editGender">Gender:</labe>
+                      <input type="checkbox" id="editGender" value="Male"> Male
+                      <input type="checkbox" id="editGender" value="Female"> Female
+                      <input type="checkbox" id="editGender" value="Other"> Other<br><br>
+                      <label for = "editCountry">Country</label>
+                    <select name="country" class="input" id="editCountry">
+                      <option name="India">India</option>
+                      <option name="America">America</option>
+                      <option name="China">China</option>
+                      <option name="Pakistan">Pakistan</option>
+                      <option name="Thailand">Thailand</option>
+                    </select><br><br>
+                    <label for="editFact">Intresting fact</label>
+                    <input type="text" id="editFact"/><br>
+                    <label for="editUsername">Username</label>
+                    <input type="text" id="editUsername"/><br><br>
+                      <!-- Add additional input fields for other form fields -->
+                      <button id="saveEditBtn">Save</button>
+                      <button id="cancelEditBtn">Cancel</button>
+                    </div>
+                  </div>
                   
             </div>
         </div>
